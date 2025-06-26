@@ -1,0 +1,36 @@
+.logoShakersGames{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.h1Titles{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.boardContainer{
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-width: 460px;
+}
+
+.AIShakers{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.logoShakersCPU{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.gameTitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gameLayout{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gameCenter{
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-width: 460px;
+}
+
+.imageAI{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    cursor: pointer;
+}

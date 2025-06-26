@@ -1,0 +1,30 @@
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.square{
+    background: white;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.square:hover {
+    background: #f0ff3d;
+    transform: scale(1.05);
+  }

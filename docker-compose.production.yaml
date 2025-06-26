@@ -1,0 +1,65 @@
+# Servicios que se van a ejecutar (back, front y db de momento)
+
+services:
+  # Servicio del front
+  frontend:
+    container_name: "tic-tac-toe-frontend--prod"
+    working_dir: /upv1-frontend
+    build:
+      context: "./webapp"
+      dockerfile: Dockerfile.production
+      args:
+        UID: "${MY_UID}"
+    ports:
+      - 3000:3000
+      - 9230:9229
+    volumes:
+      - ./webapp:/upv1-frontend
+      - ~/.ssh:/home/node/.ssh
+      - shakers-pnpm-store:/home/node/.pnpm-store
+    networks:
+      - shakers_network
+    restart: always
+
+  # Servicio del back
+  backend:
+    container_name: "tic-tac-toe-backend--prod"
+    working_dir: /upv1-backend
+    env_file: ./back/.env
+    build:
+      context: "./back"
+      dockerfile: Dockerfile.production
+      args:
+        UID: "${MY_UID}"
+    ports:
+      - 8000:8000
+      - 9229:9229
+    volumes:
+      - ./back:/upv1-backend
+      - ~/.ssh:/home/node/.ssh
+      - shakers-pnpm-store:/home/node/.pnpm-store
+    networks:
+      - shakers_network
+    depends_on:
+      - mongodb
+    restart: always
+
+  mongodb:
+    image: mongo:latest
+    container_name: "tic-tac-toe-mongodb"
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - shakers_network
+
+networks:
+  shakers_network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+    driver: local
+  shakers-pnpm-store:
+    driver: local

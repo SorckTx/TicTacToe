@@ -1,0 +1,39 @@
+{
+  "name": "interns-dev-project-webapp",
+  "version": "1.0.0",
+  "description": "Shakers - Interns DEV Project",
+  "author": "Shakers Team (dev@shakersworks.com)",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.17.1",
+    "@shakers/ui": "^0.4.76",
+    "@tabler/icons-react": "^3.19.0",
+    "next": "15.1.7",
+    "react": "^18.3.1",
+    "react-dom": "18.2.0",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "cypress": "^14.2.0",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "15.1.7",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

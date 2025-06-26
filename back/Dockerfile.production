@@ -1,0 +1,27 @@
+## Debian 12.6 released June 29 '24
+FROM node:20.15.1-slim AS base
+
+RUN apt-get update && apt-get install -y \
+    curl gnupg git procps \
+    make g++ automake openssh-client \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ARG UID
+RUN usermod -u ${UID} -s /bin/bash node
+
+ENV NODE_ENV=production
+
+RUN npm install -g pnpm
+
+WORKDIR /upv1-backend
+
+COPY entrypoint.production.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+USER node
+
+RUN mkdir /home/node/.pnpm-store
+ENV PNPM_HOME="/home/node/.pnpm"
+RUN pnpm config set store-dir /home/node/.pnpm-store
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

@@ -1,0 +1,38 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.logoContainer img {
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.loginButton {
+  width: 60%;
+  height: 80px;
+  justify-content: center; 
+  margin-left: 62px;
+}
+
+.registerButton {
+  margin-top: 4px;
+  width: 13%;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}

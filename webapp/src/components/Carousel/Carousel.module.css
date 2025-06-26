@@ -1,0 +1,36 @@
+.carouselContainer{
+    width: 20%;
+}
+
+.carouselSlides{
+    text-align: center;
+    padding: 0 10px;
+}
+
+.carouselImage{
+    width: 100%;
+    height: auto;
+    max-height: 10000px; 
+    object-fit: cover;
+    border-radius: 210px; 
+    margin: 0 auto;
+}
+
+.carouselText{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.carouselContainer :global(.slick-dots) {
+    bottom: auto !important; 
+}
+.carouselContainer :global(.slick-dots li button:before) {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.carouselContainer :global(.slick-dots li.slick-active button:before) {
+    color: #e1f034 !important;
+}

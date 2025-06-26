@@ -1,0 +1,71 @@
+.gameButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+.gameButtons button {
+    width: 220px;
+    height: 60px;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    
+  }
+
+.gameButtons button:hover {
+    background-color: #f0ff3d;
+}
+  
+
+#localselect {
+    margin-left: 10px; 
+}
+
+.gameResult{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.gameTurn{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.difficultyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px; 
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.difficultySelect{
+    width: 220px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.difficulty{
+    margin-bottom: 10px; 
+    display: block; 
+    font-weight: bold;
+    color: white;
+}

@@ -1,0 +1,60 @@
+# Servicios que se van a ejecutar (supongo que solo back y front)
+services:
+  # Servicio del front
+  frontend:
+    container_name: "tic-tac-toe-frontend"
+    working_dir: /upv1-frontend
+    build:
+      context: "./webapp"
+      dockerfile: Dockerfile.development
+    ports:
+      - 3020:3000
+      - 9230:9229 #Debugger // PONER_AQUI_PUERTO_DEBUGGER_TU_PC:9229  (no se si los puertos estan bien)
+    volumes:
+      - ./webapp:/upv1-frontend
+      - ~/.ssh:/home/node/.ssh
+      - shakers-pnpm-store:/home/node/.pnpm-store
+    networks:
+      - shakers_network
+    restart: always
+
+  # Servicio del back
+  backend:
+    container_name: "tic-tac-toe-backend"
+    working_dir: /upv1-backend
+    env_file: ./back/.env
+    build:
+      context: "./back" # no se si esto es backend o back el nombre de la carpeta que está en el proyecto
+      dockerfile: Dockerfile.development # nombre del dockerfile de la carpeta back
+    ports:
+      - 8000:8000 # PONER_AQUI_PUERTO_EJECUTAR_TU_PC:PUERTO_EN_EL_QUE_ARRANCA_EL_BACK
+      - 9229:9229 #Debugger // PONER_AQUI_PUERTO_DEBUGGER_TU_PC:9229  (no se si los puertos estan bien)
+    volumes:
+      - ./back:/upv1-backend
+      - ~/.ssh:/home/node/.ssh
+      - shakers-pnpm-store:/home/node/.pnpm-store
+    networks:
+      - shakers_network
+    depends_on:
+      - mongodb
+    restart: always
+
+  mongodb:
+    image: mongo:latest
+    container_name: "tic-tac-toe-mongodb"
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - shakers_network
+
+networks:
+  shakers_network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+    driver: local
+  shakers-pnpm-store:
+    driver: local

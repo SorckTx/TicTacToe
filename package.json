@@ -1,0 +1,24 @@
+{
+  "name": "interns-dev-project",
+  "version": "1.0.0",
+  "description": "Shakers - Interns DEV Project",
+  "author": "Shakers Team (dev@shakersworks.com)",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-socket.io": "^11.0.11",
+    "@nestjs/websockets": "^11.0.11",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.4.7",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
+}

@@ -1,0 +1,98 @@
+.titleTop::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);   
+    margin-top: 20px;
+}
+
+.logoShakers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.topContainer{
+    position: fixed;
+    width: 100%;
+   
+}
+
+.tableContainer {
+    width: 100%;
+    max-width: 600px;
+    margin:0 auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.customTable {
+    width: 100%;
+    max-width: 800px;
+}
+
+.playerRow {
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.playerRow:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.firstPlace {
+    background-color: #F8FF4D !important;
+}
+
+.rankCell {
+    width: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right !important;
+    padding-left: 15px !important;
+}
+
+.nameCell {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 15px 0 !important;
+}
+
+.scoreCell {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4CAF50;
+    text-align: right !important;
+    padding-right: 15px !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.loading,
+.error {
+    color: white;
+    font-size: 18px;
+}
+
+
+.customTable td {
+    border: none !important;
+    
+}
+
+.customTable tr {
+    border: none !important;
+}
+
