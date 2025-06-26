@@ -211,3 +211,9 @@ By the end of the project, you’ll have:
 ## License
 
 This project is licensed with the [MIT license](LICENSE).
+
+## Creators
+Adrián Martínez Roca
+Álvaro Torró Padilla
+Ignacio Gutiérrez de Solis
+Nicolas García Costa
