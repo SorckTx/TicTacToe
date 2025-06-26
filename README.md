@@ -1,6 +1,5 @@
-<img align="left"  width="150" height="150" src=".github/shakers-logo.png" />
 
-## Shakers skeleton: NestJS Fastify & Next.js
+## NestJS Fastify & Next.js
 
 This repository is a Full-Stack Typescript skeleton with NestJS Fastify and Next.js, designed for
 quickly getting started developing an API with frontend. Check the [Getting Started](#getting-started) for full details.
